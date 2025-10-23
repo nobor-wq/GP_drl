@@ -1,0 +1,1 @@
+parallel -j 3 "python run.py --device cuda:1 --seed {1} --train_step 2000 --epsilon 0.05 --algo DARRL --attacker --env_name TrafficEnv3-v1 --swanlab" ::: 5 13 57
