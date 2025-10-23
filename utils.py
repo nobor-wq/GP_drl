@@ -35,9 +35,9 @@ def get_config():
     parser.add_argument('--frequency', action='store_true', help='防御者和攻击者更新频率')
     parser.add_argument('--epsilon', type=float, default=0.03, help='扰动强度')
     parser.add_argument('--model_name', default="264_18", help='训练攻击者时使用的防御者模型')
-    parser.add_argument('--method', default="m1", help='防御者约束方法')
+    parser.add_argument('--method', default="m4", help='防御者约束方法')
     parser.add_argument('--attack_option', default="a2", help='攻击方法')
-    parser.add_argument('--threshold', type=float, default=0.01, help='扰动强度')
+    parser.add_argument('--threshold', type=float, default=0.01, help='约束阈值')
 
 
     return parser

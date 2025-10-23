@@ -104,7 +104,7 @@ if not os.path.exists(train_result_dir):
 
 def train():
 
-    model_t = drl.DRL(args.state_dim, args.action_dim, device)
+    model_t = drl.DRL(args.state_dim, args.action_dim, device, eps1=args.threshold, eps2=args.threshold)
     model_t.train()
     # 20241210 wq 跟踪当前episode的总奖励
     score = 0.0
